@@ -15,7 +15,7 @@ const Header = ({handleClaimCoins,claimCoins}) => {
     <div className=''>
 
         <div className=' pb-28   '>
-            <nav className='flex  backdrop-blur-xl pb-5 bg-white/60 fixed top-0 right-0 left-0 pr-28 pl-28 justify-between items-center  '>
+            <nav className='flex  backdrop-blur-xl pb-5 bg-white/60 fixed top-0 right-0 left-0 pr-28 pl-28 pt-5 justify-between items-center  '>
                 <div>
                     <img src={logo} alt="" />
                 </div>
