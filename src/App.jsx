@@ -7,12 +7,8 @@ import Players from './Components/Players/Players'
 import Selected from './Components/Sselected/Selected'
 import Player from './Components/Player/Player'
 import SelectedPlayer from './Components/selectedPlayer/selectedPlayer'
-import Footer from './Components/Footer/Footer'
 
-import React from 'react';
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -37,20 +33,10 @@ function App() {
   const handleClaimCoins = () => {
    
     setClaimCoins(claimCoins + 18900)
-    toast.success(" 18900 coin added", {
-      position: "top-center",
-      autoClose: 1500 
-      } );
+    alert('nois')
   }
 
-  const showAvailable = () => {
-    setActiveSection('available')
-    // console.log('hoise avail')
-  }
-  const showSelected = () => {
-    setActiveSection('selected')
-    // console.log('hoise select')
-  }
+  
 
   const handleSelectedPlayers = (player) => {
 
@@ -59,40 +45,14 @@ function App() {
 
     if (selectedPlayers.find(p => p.id === player.id)){
       
-      toast.error(" you can not choose a player more than once ", {
-        position: "top-center",
-        autoClose :2000
-          } );
+      alert('nois')
       return;
     }
-
-    else if(selectedPlayers.length >= 6){
-      
-      toast.error(" you cannot choose more than six players", {
-        position: "top-center",
-        autoClose :2000
-          } );
-      
-      return;
-    }
-    else if(claimCoins< player.biddingPrice){
-      
-      toast.warning(" You don't have enough money ", {
-        position: "top-center",
-        autoClose :2000
-          } );
-      
-      return;
-    }
-    
     else{ 
  
     setSelectedPlayers([...selectedPlayers,player]); 
     
-    toast.success(" player has been chosen ", {
-      position: "top-center",
-      autoClose :2000
-        } );
+    alert('nois')
 
 
         setClaimCoins (claimCoins >= player.biddingPrice ? claimCoins - player.biddingPrice : claimCoins) ;
@@ -103,10 +63,7 @@ function App() {
   const handleRemovePlayers = id => {
     const remainingPlayers = selectedPlayers.filter(SelectedPlayer => SelectedPlayer.id !== id);
     setSelectedPlayers(remainingPlayers);
-    toast.error(" Player has been removed ", {
-      position: "top-center",
-      autoClose :2000
-        } );
+    alert('nois')
   }
 
   
@@ -116,7 +73,7 @@ function App() {
      <div>
         <Header handleClaimCoins={handleClaimCoins} handleSelectedPlayers={handleSelectedPlayers}  claimCoins={claimCoins}></Header>
      </div>
-     <Main  showAvailable={showAvailable} selectedPlayers={selectedPlayers} showSelected={showSelected}  ></Main>
+     <Main   selectedPlayers={selectedPlayers}  ></Main>
      
      <div>
       {
@@ -142,9 +99,7 @@ function App() {
     </div>
 
 
-    <div>
-      <Footer></Footer>
-    </div>
+   
     </>
   )
 }

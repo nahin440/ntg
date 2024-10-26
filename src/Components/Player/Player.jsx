@@ -12,8 +12,8 @@ const Player = ({player,handleSelectedPlayers}) => {
     
     return (
         <div className="p-3 w-full  rounded-lg border space-y-3  ">
-            <div className="  rounded-3xl border">
-                <img className="p-2 w-full h-[250px] rounded-3xl mx-auto " src={image} alt="" />
+            <div className="  ">
+                <img className="p-2   mx-auto " src={image} alt="" />
             </div>
             <div className="flex justify-start gap-3 items-center" > 
                 <button className="text-xl"> <FaUserCircle></FaUserCircle> </button>
@@ -38,7 +38,7 @@ const Player = ({player,handleSelectedPlayers}) => {
             <div className="flex justify-between items-center">
                 <p className="flex gap-0  items-center"> <span> Price : {biddingPrice} </span> <span className="font-thin" > <FaDollarSign></FaDollarSign> </span> </p>
                 <div>
-                    <button onClick={() => handleSelectedPlayers(player)} className="py-1 px-3 rounded-lg bg-lime-400 text-black font-bold  border " >Choose Player</button>
+                    <button onClick={() => handleSelectedPlayers(player)} className="py-1 px-3 rounded-lg font-bold  border " >Choose Player</button>
                     
                 </div>
             </div>

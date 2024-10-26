@@ -1,6 +1,6 @@
 
 
-const Main = ({selectedPlayers,showSelected,showAvailable}) => {
+const Main = ({selectedPlayers}) => {
     const players = selectedPlayers.length;
     
     
@@ -12,12 +12,12 @@ const Main = ({selectedPlayers,showSelected,showAvailable}) => {
                 </h1>
 
                 <div className="space-x-3">
-                    <button onClick={showAvailable} className="py-3 px-6 rounded-lg hover:bg-lime-400 text-black font-bold border">
+                    <button  className="py-3 px-6 rounded-lg  border">
                         Available
                     </button>
 
 
-                    <button onClick={showSelected} className="py-3 px-6 rounded-lg hover:bg-lime-400 text-black font-bold border">
+                    <button className="py-3 px-6 rounded-lg border">
                         Selected ({players}) 
                     </button>
                 </div>
