@@ -31,11 +31,11 @@ const Footer = () => {
                 <div className='md:flex text-left justify-evenly items-start' >
                     <div>
                         <h1 className='text-lg font-bold'>About us</h1>
-                        <p>We are a passionate team <br /> dedicated to providing the best services <br /> to our customers.</p>
+                        <p className='text-gray-400'>We are a passionate team <br /> dedicated to providing the best services <br /> to our customers.</p>
                     </div>
                     <div className='space-y-2 mt-5 md:mt-0' >
                         <h1 className='text-lg font-bold' >Quick Links</h1>
-                        <ul>
+                        <ul className='text-gray-400'>
                         <li>Home</li>
                         <li>Contact</li>
                         <li>Service</li>
@@ -51,13 +51,19 @@ const Footer = () => {
                                     ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         />
                     </div>
-                    <button className="flex items-center gap-2 p-2 bg-lime-400 rounded-lg border" >Subscribe</button>
+                    <button className="flex items-center gap-2 p-2 bg-lime-400 text-white rounded-lg border" >Subscribe</button>
                     
                     </div>
                         </div>
                     </div>
                 </div>
 
+            </div>
+
+            
+
+            <div className='bg-black text-center border-t border-gray-600 pb-5 pt-2 text-gray-400'>
+                <h1>All right reserved @ Zubayer's Imagination</h1>
             </div>
             
         </div>

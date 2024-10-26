@@ -1,5 +1,6 @@
 import { FaUserCircle } from "react-icons/fa";
 import { FaFlag } from "react-icons/fa";
+import { FaDollarSign } from "react-icons/fa6";
 
 import React from 'react';
 
@@ -35,7 +36,7 @@ const Player = ({player,handleSelectedPlayers}) => {
                 <h1> {bowlingType} </h1>
             </div>
             <div className="flex justify-between items-center">
-                <p>Price : {biddingPrice} </p>
+                <p className="flex gap-0  items-center"> <span> Price : {biddingPrice} </span> <span className="font-thin" > <FaDollarSign></FaDollarSign> </span> </p>
                 <div>
                     <button onClick={() => handleSelectedPlayers(player)} className="py-1 px-3 rounded-lg bg-lime-400 text-black font-bold  border " >Choose Player</button>
                     

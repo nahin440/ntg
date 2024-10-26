@@ -94,7 +94,7 @@ function App() {
       autoClose :2000
         } );
 
-        
+
         setClaimCoins (claimCoins >= player.biddingPrice ? claimCoins - player.biddingPrice : claimCoins) ;
     
     }
@@ -103,6 +103,10 @@ function App() {
   const handleRemovePlayers = id => {
     const remainingPlayers = selectedPlayers.filter(SelectedPlayer => SelectedPlayer.id !== id);
     setSelectedPlayers(remainingPlayers);
+    toast.error(" Player has been removed ", {
+      position: "top-center",
+      autoClose :2000
+        } );
   }
 
   
