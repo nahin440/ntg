@@ -10,9 +10,9 @@ const Player = ({player,handleSelectedPlayers}) => {
     const {name,image,id,nationality,role,battingType,bowlingType,biddingPrice} = player
     
     return (
-        <div className="p-3 rounded-lg border space-y-3  ">
+        <div className="p-3 w-full  rounded-lg border space-y-3  ">
             <div className="  rounded-3xl border">
-                <img className="p-2 w-[200px] h-[200px] rounded-3xl mx-auto " src={image} alt="" />
+                <img className="p-2 w-full h-[250px] rounded-3xl mx-auto " src={image} alt="" />
             </div>
             <div className="flex justify-start gap-3 items-center" > 
                 <button className="text-xl"> <FaUserCircle></FaUserCircle> </button>

@@ -36,8 +36,8 @@ function App() {
 
   const handleClaimCoins = () => {
    
-    setClaimCoins(claimCoins + 8900)
-    toast.success(" 8900 coin added", {
+    setClaimCoins(claimCoins + 18900)
+    toast.success(" 18900 coin added", {
       position: "top-center",
       autoClose: 1500 
       } );
@@ -54,7 +54,7 @@ function App() {
 
   const handleSelectedPlayers = (player) => {
 
-    setClaimCoins (claimCoins - player.biddingPrice) ;
+    
     // console.log(player.biddingPrice)
 
     if (selectedPlayers.find(p => p.id === player.id)){
@@ -93,6 +93,9 @@ function App() {
       position: "top-center",
       autoClose :2000
         } );
+
+        
+        setClaimCoins (claimCoins >= player.biddingPrice ? claimCoins - player.biddingPrice : claimCoins) ;
     
     }
   }

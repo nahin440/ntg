@@ -11,7 +11,7 @@ const Players = ({handleSelectedPlayers,activeSection,players}) => {
             {activeSection === 'available'}
             <div>
             <h1>
-                Available Players : {players.length}
+                {/* Available Players : {players.length} */}
                 
             </h1>
 
